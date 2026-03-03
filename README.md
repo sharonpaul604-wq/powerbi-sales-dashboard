@@ -23,6 +23,8 @@ This project mirrors real-world ERP and WooCommerce sales data workflows used in
 - What percentage of sales come from Wholesale vs WooCommerce?
 - Which region is the strongest market?
 - How did sales trend month over month in Q1 2024?
+- What is the average order value?
+- How much revenue does each unit generate?
 
 ---
 
@@ -35,6 +37,9 @@ This project mirrors real-world ERP and WooCommerce sales data workflows used in
 | 🗺️ Top Region | East region leads all markets |
 | 📅 Peak Month | February 2024 |
 | 💰 Total Q1 Revenue | $5,600 |
+| 🛒 Average Order Value | $223.93 |
+| 📦 Total Orders Processed | 25 |
+| 💵 Revenue Per Unit | $31.45 |
 
 ---
 
@@ -42,6 +47,7 @@ This project mirrors real-world ERP and WooCommerce sales data workflows used in
 
 - **Power BI Desktop** — Report building and data modeling
 - **Power Query Editor** — Data cleaning and transformation
+- **DAX (Data Analysis Expressions)** — Custom business measures
 - **CSV Data Source** — Simulated Sage 100 / WooCommerce export
 
 ---
@@ -53,6 +59,21 @@ This project mirrors real-world ERP and WooCommerce sales data workflows used in
 - **Sales by Region** — Horizontal Bar Chart
 - **Sales Trend Q1 2024** — Line Chart (January → March)
 - **Total Revenue** — KPI Card ($5.60K)
+- **Avg Order Value** — KPI Card ($223.93)
+- **Total Orders** — KPI Card (25)
+- **Revenue Per Unit** — KPI Card ($31.45)
+
+---
+
+## 🧮 DAX Measures Written
+
+```
+Total Revenue    = SUM('herbsmith_sales'[OrderTotal])
+Avg Order Value  = AVERAGE('herbsmith_sales'[OrderTotal])
+Total Orders     = COUNT('herbsmith_sales'[OrderID])
+Revenue Per Unit = DIVIDE(SUM('herbsmith_sales'[OrderTotal]),
+                          SUM('herbsmith_sales'[Quantity]))
+```
 
 ---
 
@@ -66,7 +87,7 @@ This dashboard simulates the kind of reporting used in ERP-driven business opera
 
 **Sharon Paul**
 IT & ERP Business Systems Professional | Milwaukee, WI
-Skills: Power BI · SQL · Excel · Sage 100 ERP · WooCommerce · Business Analysis
+Skills: Power BI · DAX · SQL · Excel · Sage 100 ERP · WooCommerce · Business Analysis
 
 🔗 [SQL Business Analytics Portfolio](https://github.com/sharonpaul604-wq/sql-business-analytics)
 
