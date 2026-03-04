@@ -52,8 +52,9 @@ This project mirrors real-world ERP and WooCommerce sales data workflows used in
 
 ---
 
-## 📊 Visuals Built
+## 📊 Report Pages
 
+### Page 1 — Executive Summary Dashboard
 - **Sales by Product** — Clustered Column Chart
 - **Sales by Channel** — Pie Chart (Wholesale vs WooCommerce)
 - **Sales by Region** — Horizontal Bar Chart
@@ -62,6 +63,30 @@ This project mirrors real-world ERP and WooCommerce sales data workflows used in
 - **Avg Order Value** — KPI Card ($223.93)
 - **Total Orders** — KPI Card (25)
 - **Revenue Per Unit** — KPI Card ($31.45)
+
+### Page 2 — Interactive Analysis
+- **Channel Slicer** — Wholesale vs WooCommerce
+- **Region Slicer** — East, West, South, Midwest
+- **Month Slicer** — January, February, March
+- **Sales by Product** — Filtered Column Chart
+- **Sales by Channel** — Filtered Pie Chart
+- **Sales by Region** — Filtered Bar Chart
+- **Total Revenue** — Live KPI Card (updates with filters)
+
+---
+
+## 🖼️ Interactive Analysis Page
+
+![Herbsmith Interactive Analysis](herbsmith_interactive_page.png)
+
+---
+
+## 🔍 Interactive Features
+
+- **Channel Slicer** — Filter entire dashboard by Wholesale or WooCommerce
+- **Region Slicer** — Filter by East, West, South, Midwest
+- **Month Slicer** — Filter by January, February, March
+- All visuals respond simultaneously to combined filter selections
 
 ---
 
